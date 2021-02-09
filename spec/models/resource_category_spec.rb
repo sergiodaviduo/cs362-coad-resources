@@ -26,4 +26,10 @@ RSpec.describe ResourceCategory, type: :model do
     expect(res_cat.active).to eq(false)
   end
 
+  it 'inactive? returns boolean' do
+    res_cat = ResourceCategory.new
+
+    expect(res_cat.inactive?).to be_in([true, false])
+  end
+
 end
