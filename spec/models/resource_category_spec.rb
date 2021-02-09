@@ -6,6 +6,12 @@ RSpec.describe ResourceCategory, type: :model do
     ResourceCategory.new
   end
 
+  it 'has name' do
+    res_cat = ResourceCategory.new
+
+    expect(res_cat).to respond_to(:name)
+  end
+
   it 'activate changes active to true' do
     res_cat = ResourceCategory.new
     res_cat.activate
