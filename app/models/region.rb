@@ -10,6 +10,12 @@ class Region < ApplicationRecord
     Region.find_or_create_by(name: 'Unspecified')
   end
 
+  # method to call private method unspecified to test
+  def unspecified_test
+    Region.unspecified
+  end
+  # end of test method
+
   def to_s
     name
   end
